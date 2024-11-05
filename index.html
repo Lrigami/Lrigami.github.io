@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Portfolio">
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Serif+Text:ital@0;1&family=Nerko+One&family=Notable&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+CU&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -27,11 +28,11 @@
             <img src="img/header-calque3.png" alt="Illustration of a spaceship.">
             <img class="parallaxL" data-speed="0.6" src="img/header-calque4.png" alt="Illustration of a cloud of pink smoke.">
             <img class="parallaxR" data-speed="0.6" src="img/header-calque5.png" alt="Illustration of a cloud of pink smoke.">
-            <img class="parallaxR" data-speed="0.8" src="img/header-calque6.png" alt="Illustration of a mountain.">
-            <img class="parallaxL" data-speed="0.8" src="img/header-calque7.png" alt="Illustration of a mountain.">
+            <img class="parallaxR" data-speed="1" src="img/header-calque6.png" alt="Illustration of a mountain.">
+            <img class="parallaxL" data-speed="1" src="img/header-calque7.png" alt="Illustration of a mountain.">
             <img class="parallaxB" data-speed="2" src="img/header-calque8.png" alt="Illustration of an astronaut holding a flag on a sand dune."> <!-- change the flag star color to match the language -->
-            <img class="parallaxL" data-speed="1" src="img/header-calque9.png" alt="Illustration of a sand dune.">
-            <img class="parallaxR" data-speed="1" src="img/header-calque10.png" alt="Illustration of a sand dune.">
+            <img class="parallaxL" data-speed="1.4" src="img/header-calque9.png" alt="Illustration of a sand dune.">
+            <img class="parallaxR" data-speed="1.4" src="img/header-calque10.png" alt="Illustration of a sand dune.">
             <img src="img/header-calque12.png" alt="Illustration of floating elements.">
             <h1 class="parallax" data-speed="4">Web Developer</h1>
             <p class="parallaxB" data-speed="2">click on the flag to switch to French</p>
@@ -48,7 +49,7 @@
 
                 <div id="photo">
                     <img id="portrait" src="img/photo.jpg" alt="Photo of Thiry Prune.">
-                    <button>Download CV</button>
+                    <button>Get my CV</button>
                 </div>
 
                 <div id="description">
@@ -64,6 +65,24 @@
                         <li><img src="img/skills/react-logo.svg" alt="React Native logo" title="React logo"></li>
                     </ul>
                 </div>
+
+                <div id="spaceship-container">
+                    <div id="spaceship">
+                      <div id="wings"></div>
+                      <div id="body">
+                        <div id="tip"></div>
+                        <div id="window"></div>
+                        <div id="line"></div>
+                      </div>
+                      <div class="reactor one"></div>
+                      <div class="reactor two"></div>
+                    </div>
+                    <div id="fire">
+                      <div class="fire one"></div>
+                      <div class="fire two"></div>
+                      <div class="fire three"></div>
+                    </div>
+                  </div>
             </section>
 
             <section id="projects">
@@ -71,16 +90,16 @@
                 <div id="solar-system">
                     <div class="project four">
                         <div class="line"></div>
-                        <img src="" alt="">
+                        <a class="planet four"></a>
                         <div class="project three">
                             <div class="line"></div>
-                            <img src="" alt="">
+                            <a class="planet three"></a>
                             <div class="project two">
                                 <div class="line"></div>
-                                <img src="" alt="">
+                                <a class="planet two"></a>
                                 <div class="project one">
                                     <div class="line"></div>
-                                    <img src="" alt="">
+                                    <a class="planet one"></a>
                                     <div class="project sun"></div>
                                 </div>
                            </div>
@@ -90,6 +109,16 @@
 
                 <div id="projects-slider">
                     <!-- chaque slider a le css du projet assigné dans le système solaire. On retrouve pour chaque projet une image cliquable, un titre, une brève description, les langages utilisés et le lien github associé -->
+                    <div id="projects-slider">
+                        <div id="slider-nav">
+                            <button id="slider-before"><span class="material-icons">chevron_left</span></button>
+                            <button id="slider-after"><span class="material-icons">chevron_right</span></button>
+                        </div>
+
+                        <div id="slider-content">
+                            
+                        </div>
+                    </div>
                 </div>
             </section>
 
