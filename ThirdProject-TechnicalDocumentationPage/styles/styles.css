@@ -1,0 +1,361 @@
+[data-theme="dark"] {
+    --general-background: black;
+    --text-color: #F2D7D7;
+    --text-color-hover: black;
+    --background-nav: #d47a7a;
+    --border-color: #F2D7D7;
+    --background-footer: black;
+    --button-text-color: black;
+    --button-color: #F2D7D7;
+    --button-color-hover: #d47a7a;
+    --button-border: white;
+    --button-shadow: #d47a7a;
+    --table-border : #F2D7D7;
+    --table-text-hd : black;
+    --table-hd : #d47a7a;
+    --link-color: #c94141;
+}
+
+[data-theme="light"] {
+    --general-background: white;
+    --text-color: black;
+    --text-color-hover: black;
+    --background-nav: #F2D7D7;
+    --border-color: black;
+    --background-footer: white;
+    --button-text-color: black;
+    --button-color: #F2D7D7;
+    --button-color-hover: #d47a7a;
+    --button-border: black;
+    --button-shadow: #d47a7a;
+    --table-border : black;
+    --table-text-hd : black;
+    --table-hd : #F2D7D7;
+    --link-color: #c94141;
+}
+
+/* main */
+
+abbr {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--general-background);
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--text-color);
+}
+
+main {
+    height: 95%;
+    width: 72%;
+    position: absolute;
+    max-width: calc(95% - 310px);
+    right: 0px;
+    padding-right: 25px;
+    bottom: 25px;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+}
+
+header {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+p, li {
+    text-align: justify;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-left: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding-left: 40px;
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 1.2rem;
+    padding-left: 60px;
+}
+
+sup {
+    color: var(--link-color);
+}
+
+.sup {
+    text-decoration: none;
+}
+
+#score-report {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+
+#ref-info {
+    display: flex;
+}
+
+.comments {
+    font-size: 0.8rem;
+    padding-left: 30px;
+}
+
+p a, blockquote a {
+    color: var(--link-color);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 25px;
+    width: calc(75% - 1px);
+    right: 0;
+    background-color: var(--background-footer);
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+}
+
+/* navigation */
+
+aside {
+    height: 100%;
+    width: 25%;
+    min-width: 300px;
+    position: fixed;
+    border-right: 1px solid var(--border-color);
+}
+
+#navbar {
+    display: grid;
+    justify-content: stretch;
+    align-content: stretch;
+    height: 100%;
+    text-decoration: none;
+    vertical-align: middle;
+    color: var(--text-color);
+}
+
+#navbar header {
+    display: unset;
+    border-bottom: 1px solid var(--background-nav);
+}
+
+#navbar header a {
+    font-size: 1.5em;
+    border-bottom: unset;
+}
+
+#navbar a {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+#navbar a:hover {
+    background-color: var(--background-nav);
+    color: var(--text-color-hover);
+}
+
+.nav-link {
+    padding-left: 3%;
+    font-weight: bold;
+}
+
+#navbar .h3 {
+    padding-left: 8%;
+}
+
+/* Heading section */
+/* Title and subtitle */
+
+#JLPT_Documentation_Page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5rem;
+}
+#JLPT_Documentation_Page p {
+    font-size: 2rem;
+}
+
+/* Navigation buttons */
+
+#a-buttons {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 40px;
+    margin: 50px auto;
+    color: var(--text-color);
+}
+
+#a-buttons button {
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px var(--button-shadow);
+    border: 1px solid var(--button-border);
+    border-radius: 25px;
+    background-color: var(--button-color);
+    font-size: 1.5rem;
+}
+
+#a-buttons button:hover {
+    background-color: var(--button-color-hover);
+    cursor: pointer;
+}
+
+#a-buttons a {
+    text-decoration: none;
+    color: var(--button-text-color);
+}
+
+/* Day/Night mode */
+
+#day-night-mode {
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+#day-night-mode.night {
+    background-color: var(--background-nav);
+    border-color: var(--link-color);
+    color: var(--button-color);
+}
+
+#day-night-mode div:first-of-type {
+    padding: 0 20px 0 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
+
+#day-night-mode.night div:first-of-type {
+    padding: 0 5px 0 5px;
+    border: none;
+}
+
+#day-night-mode div:last-of-type {
+    padding: 0 5px 0 5px;
+    border: none;
+}
+
+#day-night-mode.night div:last-of-type {
+    padding: 0 20px 0 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
+
+/* tables */
+
+table {
+    border: 1px solid var(--table-border);
+    border-collapse: collapse;
+}
+
+.tables {
+    margin-bottom: 50px;
+}
+
+caption {
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+th, td {
+    border: 1px solid var(--table-border);
+    padding: 5px;
+}
+
+th {
+    background-color: var(--table-hd);
+    color: var(--table-text-hd);
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    width: 50px;
+    padding-left: 35px;
+}
+
+.equal {
+    width: 80px;
+}
+
+#changes-in-number .data {
+    writing-mode: vertical-rl;
+    font-size: 0.6rem;
+    padding-top: 200%;
+}
+
+.charts-css.legend {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.charts-css th {
+    color: var(--text-color);
+}
+
+/* @media */
+
+@media screen and (max-width: 1150px) {
+    footer {
+        width: calc(100% - 301px);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
