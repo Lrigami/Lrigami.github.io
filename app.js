@@ -60,8 +60,13 @@ async function getData() {
                 lastP.appendChild(projectTool);
             }
 
-            projectDiv.innerHTML += `<p><span class="info">GitHub: </span><a href=${project.github} target="_blank">Project on GitHub</a></p>`
+            projectDiv.innerHTML += `<p><span class="info">GitHub: </span><a href=${project.github} target="_blank">Project on GitHub</a></p>`;
 
+            let planetDesign = document.createElement("img");
+            planetDesign.src = project.design;
+            planetDesign.classList.add("planet-design");
+
+            projectContent.appendChild(planetDesign);
             projectContent.appendChild(projectViewport);
             projectContent.appendChild(projectDiv);
 
@@ -102,7 +107,6 @@ for (let i = 0; i < planets.length+1 ; i++) {
         const sliderContent = document.getElementById("slider-content");
         let sliderWidth = sliderContent.offsetWidth;
         sliderContent.scrollLeft += (sliderWidth * i-1);
-        console.log(`sliderWidht=${sliderWidth}, scrollLeft=${sliderContent.scrollLeft}`)
 
         // When I click outside of the slider, it disappears and scrollLeft resets to 0
         function handleClickOutside(event) { 
@@ -117,6 +121,3 @@ for (let i = 0; i < planets.length+1 ; i++) {
         document.addEventListener("click", handleClickOutside);
     }
 }
-
-
-

@@ -2,12 +2,11 @@
 
 }
 
-/* Attention à nettoyer correctement le CSS  */
-
 * {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -20,7 +19,6 @@ body {
 }
 
 /* Header */
-
 header {
     height: 100%;
     background-image: url("img/header-calque1.jpg");
@@ -31,6 +29,7 @@ header {
     overflow: hidden;
 }
 
+/* navigation */
 nav {
     position: fixed;
     width: 100%;
@@ -118,6 +117,7 @@ nav li a {
     transition: 1s;
 }
 
+/* header content */
 h1 {
     position: relative;
     font-size: 10rem;
@@ -212,32 +212,7 @@ header img:last-of-type {
     animation: levitating-inverted 5s ease infinite;
 }
 
-header p {
-    position: absolute;
-    z-index: 15;
-    left: 47%;
-    top: 35%;
-    color: white;
-    font-size: 1rem;
-    width: 160px;
-    text-align: center;
-}
-
-header button {
-    position: absolute;
-    background-color: transparent;
-    z-index: 15;
-    width: 110px;
-    height: 60px;
-    box-sizing: border-box;
-    border: none;
-    left: 48.2%;
-    top: 40.5%;
-    cursor: pointer;
-}
-
 /* Main */
-
 main {
     height: auto;
     background: radial-gradient(ellipse at top, #060e40 30%, #400183 100%);
@@ -248,8 +223,7 @@ section {
     position: relative;
 }
 
-/* About me */
-
+/* About me section */
 #about-me {
     background-image: url("img/header-calque1.png");
 }
@@ -263,16 +237,17 @@ section {
     position: relative;
 }
 
-#presentation img {
+#presentation img:not(#portrait) {
     max-width: 500px;
+    width: 100%;
     max-height: 500px;
 }
 
 #photo {
     height: 70%;
+    max-width: 500px;
     margin-right: 30px;
     filter: drop-shadow(0 0 10px #eee1b4);
-    flex-grow: 1;
     position: relative;
 }
 
@@ -306,7 +281,7 @@ section {
 #description {
     flex-grow: 1;
     color: white;
-
+    flex-basis: 200;
 }
 
 #description h2 {
@@ -320,7 +295,6 @@ section {
 }
 
 /* skills  */
-
 #skills {
     width: 80%;
     height: 40%;
@@ -360,20 +334,20 @@ section {
     bottom: 0;
     right: 10px;
     z-index: 20;
-  }
+}
 
 #spaceship-container:hover {
     animation: css-spaceship 8s ease-in-out;
 }
   
-  #spaceship {
+#spaceship {
     height: 80%;
     width: 100%;
     position: relative;
     z-index: 3;
-  }
-  
-  #wings {
+}
+
+#wings {
     width: 50%;
     height: 40%;
     background-color: transparent;
@@ -382,9 +356,9 @@ section {
     left: 25%;
     border-radius: 50%;
     box-shadow: 0px -20px 0px 8px #613768, 0px -25px 0px 8px #6137b9;
-  }
-  
-  #body {
+}
+
+#body {
     height: 90%;
     width: 35%;
     position: absolute;
@@ -394,9 +368,9 @@ section {
     overflow: hidden;
     box-sizing: border-box;
     border: 3px solid black;
-  }
-  
-  #tip {
+}
+
+#tip {
     width: 100%;
     height: 40%;
     position: absolute;
@@ -405,9 +379,9 @@ section {
     border-radius: 47%;
     box-sizing: border-box;
     border: 2px solid black;
-  }
-  
-  #window {
+}
+
+#window {
     height: 25%;
     width: 50%;
     background-color: #c2e2f2;
@@ -417,9 +391,9 @@ section {
     border-radius: 50%;
     box-sizing: border-box;
     border: 10px solid grey;
-  }
-  
-  #line {
+}
+
+#line {
     width: 100%;
     height: 5%;
     position: absolute;
@@ -427,9 +401,9 @@ section {
     box-sizing: border-box;
     border: 2px solid black;
     background-color: #613768;
-  }
-  
-  .reactor {
+}
+
+.reactor {
     width: 20%;
     height: 20%;
     background: linear-gradient(#613768 70%, #6137b9);
@@ -437,30 +411,30 @@ section {
     bottom: 0;
     box-sizing: border-box;
     border: 2px solid black;
-  }
-  
-  .reactor.one {
+}
+
+.reactor.one {
     left: 35%;
     transform: skewX(-26deg);
-  }
-  
-  .reactor.two {
+}
+
+.reactor.two {
     right: 35%;
     transform: skewX(26deg);
-  }
-  
-  #fire {
+}
+
+#fire {
     height: 20%;
     width: 100%;
     position: relative;
     display: none;
-  }
+}
 
 #spaceship-container:hover #fire {
     display: block;
 }
   
-  .fire {
+.fire {
     width: 25%;
     height: 250%;
     position: absolute;
@@ -468,35 +442,44 @@ section {
     box-sizing: border-box;
     border-radius: 50%;
     border: 6px solid rgba(255, 150, 0, 1);
-  }
-  
-  .fire.one {
+}
+
+.fire.one {
     left: 37.5%;
     top: -15%;
-  }
-  
-  .fire.two {
+}
+
+.fire.two {
     scale: 0.7;
     left: 23%;
     top: -60%;
     transform: rotate(30deg);
-  }
-  
-  .fire.three {
+}
+
+.fire.three {
     scale: 0.7;
     right: 23%;
     top: -60%;
     transform: rotate(-30deg);
-  }
+}
 
-/* Projects */
-
+/* Projects section */
 #projects {
     position: relative;
+    display: flex;
+}
+
+#projects h2 {
+    font-size: 5rem;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    top: 2px;
+    left: 2px;
 }
 
 /* Solar system */
-
 #solar-system {
     width: 100%;
     margin-top: 60px;
@@ -504,7 +487,7 @@ section {
     position: relative;
     overflow-x: hidden;
     overflow: visible;
-  }
+}
   
 .line {
     border-radius: 100% 0 0 100% / 50%;
@@ -633,10 +616,48 @@ section {
     background-image: url("img/projects/project1.jpg");
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* pour le déplacement des planètes focus : planet:focus > not:focus  */
 
-/* slider */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* slider */
 #projects-slider {
     position: absolute;
     width: 70dvw;
@@ -665,15 +686,44 @@ section {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    max-width: 1100px;
+    max-width: 1150px;
     position: absolute;
+}
+
+#slider-nav button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 3px dotted black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#slider-after:hover {
+    animation: nav-button 10s linear infinite;
+}
+
+#slider-before:hover {
+    animation: nav-button-inverted 10s linear infinite;
+}
+
+#slider-after:hover span {
+    animation: nav-button-inverted 10s linear infinite;
+}
+
+#slider-before:hover span {
+    animation: nav-button 10s linear infinite;
+}
+
+#slider-nav button span {
+    transform: translate(50 50);
 }
 
 #slider-content {
     width: 75%;
     max-width: 900px;
     height: 75%;
-    border: 1px solid black;
     position: relative;
     display: flex;
     overflow: hidden;
@@ -685,10 +735,27 @@ section {
     height: 100%;
     display: flex;
     gap: 10px;
+    position: relative;
+}
+
+.slider-project div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.planet-design {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 40px;
+    height: 40px;
 }
 
 iframe {
     width: 400%;
+    max-width: 600px;
     height: 100%;
     box-sizing: border-box;
     border: none;
@@ -700,21 +767,70 @@ iframe {
     font-size: 1.3rem;
 }
 
-/* Contact Me */
+.tool {
+    padding: 2px 10px;
+    margin: 0 10px;
+    background-color: rgba(219, 208, 46, 0.9);
+    box-sizing: border-box;
+    border-radius: 2px;
+}
 
+/* Contact Me section */
 #contact-me {
     background-image: url("img/footer.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    display: flex;
 }
 
-footer {
-    background: linear-gradient(#400183, #ab50b0, #f5a8e0);
+#contact {
+    margin: auto;
+    position: relative;
+    width: 40%;
+    height: 60%;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.box {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+.cursor {
+    font-weight: bold;
+    animation: blink 0.7s steps(2) infinite;
+}
+
+#contact button {
+    width: 60%;
+    height: 20%;
+    font-size: 2.5rem;
+    color: rgb(117, 2, 117);
+    font-family: Audiowide, Arial, Helvetica, sans-serif;
+    cursor: pointer; 
+    filter: drop-shadow(2px 2px 25px rgb(117, 2, 117));
+    transition: .3s;
+}
+
+#contact button:hover {
+    color: rgb(5, 86, 115);
+    filter: drop-shadow(2px 2px 25px rgb(88, 230, 255));
 }
 
 /* Animations */
-
 @keyframes levitating {
     0% {
 
@@ -767,7 +883,37 @@ footer {
     }
 }
 
+@keyframes nav-button {
+    0% {
+        scale: 1.1;
+        translate: 50 50;
+        rotate: 0deg;
+    }
 
+    100% {
+        rotate: 360deg;
+    }
+}
 
+@keyframes nav-button-inverted {
+    0% {
+        scale: 1.1;
+        translate: 50 50;
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: -360deg;
+    }
+}
+
+@keyframes blink {
+    0%, 100% { 
+        opacity: 1; 
+    }
+    50% { 
+        opacity: 0; 
+    }
+}
 
 /* Media queries */

@@ -35,8 +35,6 @@
             <img class="parallaxR" data-speed="1.4" src="img/header-calque10.png" alt="Illustration of a sand dune.">
             <img src="img/header-calque12.png" alt="Illustration of floating elements.">
             <h1 class="parallaxR" data-speed="4">Web Developer</h1>
-            <p class="parallaxB" data-speed="2">click on the flag to switch to French</p>
-            <button class="parallaxB" data-speed="2"></button>
         </header>
 
         <main>
@@ -45,11 +43,13 @@
                     <img src="img/chevron-constellation-open.png" alt="illustration of a constellation shaped as an open chevron">
                     <div id="photo">
                         <img id="portrait" src="img/photo.jpg" alt="Photo of Thiry Prune.">
-                        <button>Get my CV</button>
+                        <a href="CV_Thiry_Prune_Sept24.pdf" download="CV_Thiry_Prune_Sept24.pdf">
+                            <button>Get my CV</button>
+                        </a>
                     </div>
                     <div id="description">
                         <h2>Thiry Prune</h2>
-                        <p>Passionate and dedicated web developer with a strong foundation in JavaScript. I thrive on building intuitive and efficient solutions, focusing on clean code and user-centered design. With experience in integration, I continuously explore new technologies and stay committed to improving my skills. I'm excited to contribute to projects that make a real impact and always eager to learn from others in the field.</p>
+                        <p>I am a passionate and dedicated web developer with a good foundation in JavaScript. I thrive on building intuitive and efficient solutions, focusing on clean code and user-centered design. With experience in integration, I continuously explore new technologies and stay committed to improving my skills. I'm excited to contribute to projects that make a real impact and always eager to learn from others in the field.</p>
                     </div>
                     <img src="img/chevron-constellation-close.png" alt="illustration of a constellation shaped as a closed chevron"> 
                 </div>
@@ -127,9 +127,24 @@
             </section>
 
             <section id="contact-me">
-                <h2>Contact me</h2>
-                <h3>A project?</h3>
+                <div id="contact">
+                    <div class="box">
+                        <p>A&nbsp;</p>
+                        <div class="text-container">
+                            <span id="text"></span>
+                            <span class="cursor">|</span>
+                        </div>
+                        <p>?</p>
+                    </div>
+                    <button>Contact me</button>
+                    <div id="media">
+                        <a href="https://www.linkedin.com/in/prune-thiry-6886a6136/" target="_blank"><img src="img/linkedin-logo.svg" alt="LinkedIn Logo."></a>
+                        <a href="https://github.com/Lrigami" target="_blank"><img src="img/github-logo.svg" alt="GitHub Logo."></a>
+                    </div>
+                </div>
             </section>
         </main>
+
+        <script src="script.js"></script>
     </body>
 </html>
