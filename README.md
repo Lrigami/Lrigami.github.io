@@ -10,10 +10,14 @@ Please refer to their own Readme.md file for more information on these projects.
 I wanted to design a portfolio on the theme of space, which is close to my heart. I'm passionate about quantum physics and astronomy, subjects I read about very regularly. However, I wanted a lighter design, somewhere between a sketch and a doodle, with bright colours.
 
 ### To-do list
+- [x] Project slider;
+- [x] When the user click on a planet, it goes to the right project on the slider;
+- [x] Night mode design;
+- [ ] Form pop-up when the user click on the "Contact me" button;
 - [ ] Language switch button;
 - [ ] Day-Night mode switch button (with another light design);
 - [ ] All the projects within the iframes should be responsive;
-- [ ] Planet animation when the user click on a planet;
+- [ ] Planet animation when the user click on a planet.
 
 ### Attributions
 I designed all the images in this portfolio, except for the logos I took from [icones8](https://icones8.fr/).
