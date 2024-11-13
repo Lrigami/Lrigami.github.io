@@ -467,6 +467,8 @@ section {
 #projects {
     position: relative;
     display: flex;
+    margin-top: 50px;
+    scroll-margin-top: 50px;
 }
 
 #projects h2 {
@@ -475,7 +477,7 @@ section {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     position: absolute;
-    top: 2px;
+    top: -40px;
     left: 2px;
 }
 
@@ -567,7 +569,7 @@ section {
 .planet.four {
     width: 150px;
     height: 150px;
-    bottom: 86%;
+    bottom: 82%;
     left: 45%;
     background-image: url("img/planet4.png");
     filter: drop-shadow(0 0 5px rgb(0, 255, 155));
