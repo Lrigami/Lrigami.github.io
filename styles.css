@@ -834,18 +834,27 @@ iframe {
     animation: blink 0.7s steps(2) infinite;
 }
 
-#contact button {
+.mail {
     width: 60%;
     height: 20%;
-    font-size: 2.5rem;
-    color: var(--contact-button-color);
-    font-family: Audiowide, Arial, Helvetica, sans-serif;
     cursor: pointer; 
     filter: drop-shadow(2px 2px 25px var(--contact-button-color));
+    background-color: var(--text-color);
     transition: .3s;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    color: var(--contact-button-color);
+    font-family: var(--robotic);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
 }
 
-#contact button:hover {
+.mail:hover {
     color: var(--contact-button-hover);
     filter: drop-shadow(2px 2px 25px var(--contact-button-shadow-hover));
 }
