@@ -80,7 +80,7 @@ async function getData() {
 getData();
 
 let slider = document.getElementById("projects-slider");
-let planets = document.querySelectorAll(".planet div");
+let planets = document.querySelectorAll(".planet");
 
 // slider navigation
 let previousButton = document.getElementById("slider-before");

@@ -138,11 +138,15 @@ nav li a {
 /* header content */
 h1 {
     position: relative;
-    font-size: 10rem;
+    font-size: 6rem;
     color: var(--text-color);
-    top: calc(50% - 5rem);
+    top: calc(50% - 10rem);
     text-align: center;
     z-index: 4;
+}
+
+h1 span {
+    font-size: 10rem;
 }
 
 header img:first-of-type {
@@ -285,7 +289,7 @@ section {
     border-radius: var(--round);
     cursor: pointer;
     font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: .2s;
     position: absolute;
     right: 0;
@@ -572,6 +576,9 @@ section {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .planet div {
