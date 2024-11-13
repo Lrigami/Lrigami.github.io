@@ -13,6 +13,7 @@ I wanted to design a portfolio on the theme of space, which is close to my heart
 - [x] Project slider;
 - [x] When the user click on a planet, it goes to the right project on the slider;
 - [x] Night mode design;
+- [ ] Add Favicon
 - [ ] Update the navbar with LinkedIn and GitHub links, day-night-mode button and language button;
 - [ ] Form pop-up when the user click on the "Contact me" button;
 - [ ] Language switch button;
