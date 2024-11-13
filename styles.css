@@ -859,6 +859,13 @@ iframe {
     filter: drop-shadow(2px 2px 25px var(--contact-button-shadow-hover));
 }
 
+#media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 /* Animations */
 @keyframes levitating {
     0% {
