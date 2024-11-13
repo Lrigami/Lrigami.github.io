@@ -146,7 +146,7 @@ h1 {
 }
 
 h1 span {
-    font-size: 10rem;
+    font-size: 9rem;
 }
 
 header img:first-of-type {
@@ -579,6 +579,7 @@ section {
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
+    
 }
 
 .planet div {
