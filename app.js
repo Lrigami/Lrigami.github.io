@@ -100,7 +100,7 @@ nextButton.onclick = () => {
     const sliderProject = document.querySelectorAll(".slider-project");
 }
 
-// When I click on a planet, the slider display the right project
+// When I click on a planet, the slider display the right project                           Use findIndex() instead of a for loop ? 
 for (let i = 0; i < planets.length+1 ; i++) {
     planets[i].onclick = () => {
         slider.style.display = "flex";
