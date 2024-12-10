@@ -105,8 +105,6 @@ nextButton.onclick = () => {
 planets.forEach((planet) => {
     planet.addEventListener("click", () => {
         let position = planet.id.replace("planet", "");
-        console.log(position);
-
         showSlider(position);
 
         // When I click outside of the slider, it disappears and scrollLeft resets to 0
@@ -116,7 +114,6 @@ planets.forEach((planet) => {
                 sliderContent.scrollLeft = 0;
                 slider.style.display = "none";
                 document.removeEventListener("click", handleClickOutside);
-                console.log(sliderContent.scrollLeft); 
             }
         }
 
@@ -128,7 +125,5 @@ function showSlider(p) {
     slider.style.display = "flex";
     const sliderContent = document.getElementById("slider-content");
     let sliderWidth = sliderContent.offsetWidth;
-    console.log(sliderWidth);
-    console.log(sliderContent.scrollLeft);
     sliderContent.scrollLeft = (sliderWidth * (p-1));
 }
