@@ -102,6 +102,7 @@ nextButton.onclick = () => {
 
 // When I click on a planet, the slider display the right project
 for (let i = 0; i < planets.length+1 ; i++) {
+    let 
     planets[i].onclick = () => {
         slider.style.display = "flex";
         const sliderContent = document.getElementById("slider-content");
