@@ -80,7 +80,7 @@ async function getData() {
 getData();
 
 let slider = document.getElementById("projects-slider");
-let planets = document.querySelectorAll(".planet");
+let planets = document.querySelectorAll(".project a");
 
 // slider navigation
 let previousButton = document.getElementById("slider-before");
@@ -100,25 +100,35 @@ nextButton.onclick = () => {
     const sliderProject = document.querySelectorAll(".slider-project");
 }
 
-// When I click on a planet, the slider display the right project                           Use findIndex() instead of a for loop ? 
-for (let i = 0; i < planets.length+1 ; i++) {
-    let 
-    planets[i].onclick = () => {
-        slider.style.display = "flex";
-        const sliderContent = document.getElementById("slider-content");
-        let sliderWidth = sliderContent.offsetWidth;
-        sliderContent.scrollLeft += (sliderWidth * i-1);
+// When I click on a planet, the slider display the right project                           
+// Use findIndex() instead of a for loop ? 
+planets.forEach((planet) => {
+    planet.addEventListener("click", () => {
+        let position = planet.id.replace("planet", "");
+        console.log(position);
+
+        showSlider(position);
 
         // When I click outside of the slider, it disappears and scrollLeft resets to 0
         function handleClickOutside(event) { 
-            if (!slider.contains(event.target) && event.target !== planets[i]) {
+            if (!slider.contains(event.target) && event.target !== planets[position-1]) {
                 const sliderContent = document.getElementById("slider-content");
                 sliderContent.scrollLeft = 0;
                 slider.style.display = "none";
-                document.removeEventListener("click", handleClickOutside); 
+                document.removeEventListener("click", handleClickOutside);
+                console.log(sliderContent.scrollLeft); 
             }
         }
 
         document.addEventListener("click", handleClickOutside);
-    }
+    })
+})
+
+function showSlider(p) {
+    slider.style.display = "flex";
+    const sliderContent = document.getElementById("slider-content");
+    let sliderWidth = sliderContent.offsetWidth;
+    console.log(sliderWidth);
+    console.log(sliderContent.scrollLeft);
+    sliderContent.scrollLeft = (sliderWidth * (p-1));
 }
