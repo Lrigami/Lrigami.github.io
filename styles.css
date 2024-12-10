@@ -36,6 +36,10 @@ body {
     height: 100vh;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /* Header */
 header {
     height: 100%;
