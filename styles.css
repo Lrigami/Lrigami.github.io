@@ -793,6 +793,7 @@ iframe {
     background-size: cover;
     position: relative;
     display: flex;
+    flex-direction: column;
 }
 
 #contact {
@@ -806,6 +807,13 @@ iframe {
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
+}
+
+small {
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    color: #f67080;
 }
 
 .box {
