@@ -690,7 +690,7 @@ section {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    max-width: 1150px;
+    max-width: 1500px;
     position: absolute;
 }
 
@@ -725,8 +725,8 @@ section {
 }
 
 #slider-content {
-    width: 75%;
-    max-width: 900px;
+    width: 80%;
+    max-width: 1200px;
     height: 75%;
     position: relative;
     display: flex;
@@ -759,7 +759,7 @@ section {
 
 iframe {
     width: 400%;
-    max-width: 600px;
+    max-width: 800px;
     height: 100%;
     box-sizing: border-box;
     border: none;
