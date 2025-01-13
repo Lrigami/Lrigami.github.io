@@ -49,7 +49,7 @@ async function getData() {
 
             projectDiv.innerHTML = `<p><span class="info">Name: </span>${project.name}</p>
             <p><span class="info">Description: </span>${project.description}</p>
-            <p><span class="info">Languages & Techno: </span></p>`;
+            <p id="tools"><span class="info">Languages & Techno: </span></p>`;
 
             const lastP = projectDiv.querySelector("p:last-of-type");
 

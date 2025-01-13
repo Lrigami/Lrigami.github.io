@@ -514,7 +514,6 @@ section {
     height: 90%;
     position: relative;
     overflow-x: hidden;
-    overflow: visible;
 }
   
 .line {
@@ -665,10 +664,10 @@ section {
 /* slider */
 #projects-slider {
     position: absolute;
-    width: 70dvw;
-    height: 70dvh;
-    top: calc(50% - 35dvh);
-    left: calc(50% - 35dvw);
+    width: 85dvw;
+    height: 84dvh;
+    top: calc(50% - 45dvh);
+    left: calc(50% - 42dvw);
     background-color: var(--slider-background);
     backdrop-filter: blur(2px);
     box-sizing: border-box;
@@ -765,6 +764,11 @@ iframe {
     box-sizing: border-box;
     border: none;
     border-radius: 10px;
+}
+
+#tools {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .info {
