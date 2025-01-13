@@ -568,7 +568,7 @@ section {
     filter: drop-shadow(-10px 1px 20px white);
 }
 
-.planet {
+#planet1, #planet2, #planet3, #planet4 {
     position: absolute;
     cursor: pointer;
     border: none;
@@ -583,20 +583,9 @@ section {
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
-    
 }
 
-.planet div {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: var(--round);
-    height: 95%;
-    width: 95%;
-    box-sizing: border-box;
-}
-
-.planet.four {
+#planet1 {
     width: 150px;
     height: 150px;
     bottom: 82%;
@@ -605,11 +594,7 @@ section {
     filter: drop-shadow(0 0 5px rgb(0, 255, 155));
 }
 
-.planet.four div {
-    background-image: url("img/projects/project4.jpg");
-}
-
-.planet.three {
+#planet2 {
     width: 120px;
     height: 120px;
     bottom: 61%;
@@ -618,11 +603,7 @@ section {
     filter: drop-shadow(0 0 10px rgb(255, 155, 155));
 }
 
-.planet.three div {
-    background-image: url("img/projects/project3.jpg");
-}
-
-.planet.two {
+#planet3 {
     width: 130px;
     height: 130px;
     bottom: -3%;
@@ -631,21 +612,13 @@ section {
     filter: drop-shadow(0 0 10px rgb(0, 150, 255));
 }
 
-.planet.two div {
-    background-image: url("img/projects/project2.jpg");
-}
-
-.planet.one {
+#planet4 {
     width: 140px;
     height: 140px;
     bottom: 56%;
     left: 0%;
     background-image: url("img/planet1.png");
     filter: drop-shadow(0 0 15px rgb(100, 100, 100));
-}
-
-.planet.one div {
-    background-image: url("img/projects/project1.jpg");
 }
 
 
