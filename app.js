@@ -23,6 +23,20 @@ window.addEventListener("scroll", () => {
     })
 });
 
+// navigation
+
+let mobileMenuContainer = document.getElementById("mobile-menu-container");
+let mobileMenu = document.getElementById("mobile-menu");
+let burgerMenuBtn = document.getElementById("burger-menu");
+let mobileMenuList = document.getElementById("mobile-menu-list");
+
+burgerMenuBtn.onclick = () => {
+    mobileMenuContainer.style.width === '300px' ? mobileMenuContainer.style.width = '0px' : mobileMenuContainer.style.width = '300px';
+    burgerMenuBtn.classList.toggle("close");
+    mobileMenuList.classList.toggle("close-list");
+}
+
+
 // projects solar-system effects
 
 // slider management
