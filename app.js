@@ -5,6 +5,8 @@ let parallaxR = document.querySelectorAll(".parallaxR");
 let parallaxB = document.querySelectorAll(".parallaxB");
 
 window.addEventListener("scroll", () => {
+    if (window.innerWidth < 450) return;
+    
     let scroll = window.scrollY;
 
     parallaxL.forEach((element) => {

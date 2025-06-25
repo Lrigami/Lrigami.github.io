@@ -1024,6 +1024,10 @@ small {
 /* Media queries */
 
 @media screen and (max-width: 450px) {
+    body {
+        max-width: 100%;
+    }
+    /* header */
     nav ul {
         width: 100%;
         margin: 0;
@@ -1077,4 +1081,12 @@ small {
     h1 {
         top: calc(50% - 6rem);
     }
+
+    .parallax, .parallaxL, .parallaxR, .parallaxB {
+        transform: none !important;
+        will-change: auto;
+    }
+
+    /* section about-me */
+
 }
