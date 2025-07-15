@@ -967,7 +967,7 @@ small {
     }
 
     #presentation {
-        height: 40%;
+        height: auto;
     }
 
     #photo {
@@ -980,6 +980,7 @@ small {
 
     #skills {
         margin: 0 auto;
+        height: auto;
     }
 
     #skills ul {
