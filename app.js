@@ -33,7 +33,8 @@ let burgerMenuBtn = document.getElementById("burger-menu");
 let mobileMenuList = document.getElementById("mobile-menu-list");
 
 burgerMenuBtn.onclick = () => {
-    mobileMenuContainer.style.width === '300px' ? mobileMenuContainer.style.width = '0px' : mobileMenuContainer.style.width = '300px';
+    mobileMenuContainer.style.width === '100%' ? mobileMenuContainer.style.width = '0px' : mobileMenuContainer.style.width = '100%';
+    mobileMenuContainer.style.width === '100%' ? mobileMenuContainer.style.backgroundColor = 'rgb(44, 7, 100, 0.8)' : mobileMenuContainer.style.backgroundColor = 'none';
     burgerMenuBtn.classList.toggle("close");
     mobileMenuList.classList.toggle("close-list");
 }
