@@ -13,7 +13,7 @@
     --slider-background: rgba(0, 255, 255, 0.7);
     --slider-border: rgb(100, 100, 100);
     --techno-background-color: rgba(219, 208, 46, 0.9);
-    --contact-button-color: rgb(117, 2, 117);
+    --contact-button-color: rgb(100, 15, 100);
     --contact-button-hover: rgb(5, 86, 115);
     --contact-button-shadow-hover: rgb(88, 230, 255);
     --round: 50%;
@@ -143,6 +143,69 @@ nav li a {
     transition: 1s;
 }
 
+#mobile-menu-container {
+    width: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#burger-menu {
+    visibility: hidden;
+    background-image: url(img/burger-menu.svg);
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 80px;
+    z-index: 9;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close {
+    background-image: url(img/close.svg) !important;
+}
+
+#mobile-menu {
+    width: 100%;
+    position: relative;
+    height: 200px;
+}
+
+#mobile-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    scale: 1;
+}
+
+#mobile-menu ul li::before {
+    left: 15px;
+}
+
+#mobile-menu ul li:hover::before {
+    width: 82%;
+}
+
+#mobile-menu li:last-of-type {
+    display: flex;
+    gap: 50px;
+}
+
+#mobile-menu li a img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.close-list {
+    scale: 0 !important;
+}
+
 /* header content */
 h1 {
     position: relative;
@@ -249,7 +312,7 @@ main {
 }
 
 section {
-    height: 100vh;
+    height: 100dvh;
     position: relative;
 }
 
@@ -345,149 +408,12 @@ section {
 #skills ul {
     width: 70%;
     display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 #skills li img {
     width: 90px;
-}
-
-/* spaceship */
-#spaceship-container {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    bottom: 0;
-    right: 10px;
-    z-index: 20;
-}
-
-#spaceship-container:hover {
-    animation: css-spaceship 8s ease-in-out;
-}
-  
-#spaceship {
-    height: 80%;
-    width: 100%;
-    position: relative;
-    z-index: 3;
-}
-
-#wings {
-    width: 50%;
-    height: 40%;
-    background-color: transparent;
-    position: absolute; 
-    bottom: -5%;
-    left: 25%;
-    border-radius: 50%;
-    box-shadow: 0px -20px 0px 8px #613768, 0px -25px 0px 8px #6137b9;
-}
-
-#body {
-    height: 90%;
-    width: 35%;
-    position: absolute;
-    left: 32.5%;
-    background-color: #0f3041;
-    border-radius: 50%;
-    overflow: hidden;
-    box-sizing: border-box;
-    border: 3px solid black;
-}
-
-#tip {
-    width: 100%;
-    height: 40%;
-    position: absolute;
-    top: -6%;
-    background: linear-gradient(60deg, #613768, #6137b9);
-    border-radius: 47%;
-    box-sizing: border-box;
-    border: 2px solid black;
-}
-
-#window {
-    height: 25%;
-    width: 50%;
-    background-color: #c2e2f2;
-    position: absolute;
-    top: 42.5%;
-    left: 25%;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border: 10px solid grey;
-}
-
-#line {
-    width: 100%;
-    height: 5%;
-    position: absolute;
-    bottom: 18%;
-    box-sizing: border-box;
-    border: 2px solid black;
-    background-color: #613768;
-}
-
-.reactor {
-    width: 20%;
-    height: 20%;
-    background: linear-gradient(#613768 70%, #6137b9);
-    position: absolute;
-    bottom: 0;
-    box-sizing: border-box;
-    border: 2px solid black;
-}
-
-.reactor.one {
-    left: 35%;
-    transform: skewX(-26deg);
-}
-
-.reactor.two {
-    right: 35%;
-    transform: skewX(26deg);
-}
-
-#fire {
-    height: 20%;
-    width: 100%;
-    position: relative;
-    display: none;
-}
-
-#spaceship-container:hover #fire {
-    display: block;
-}
-  
-.fire {
-    width: 25%;
-    height: 250%;
-    position: absolute;
-    background: radial-gradient(ellipse at top, #ffa5bb, #ffa500);
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 6px solid rgba(255, 150, 0, 1);
-}
-
-.fire.one {
-    left: 37.5%;
-    top: -15%;
-}
-
-.fire.two {
-    scale: 0.7;
-    left: 23%;
-    top: -60%;
-    transform: rotate(30deg);
-}
-
-.fire.three {
-    scale: 0.7;
-    right: 23%;
-    top: -60%;
-    transform: rotate(-30deg);
 }
 
 /* Projects section */
@@ -514,7 +440,6 @@ section {
     margin-top: 60px;
     height: 90%;
     position: relative;
-    overflow-x: hidden;
 }
   
 .line {
@@ -810,10 +735,10 @@ iframe {
 }
 
 small {
-    position: absolute;
-    bottom: 5px;
-    right: 30px;
     color: #f67080;
+    position: absolute;
+    right: 10px;
+    bottom: 3px;
 }
 
 .box {
@@ -836,7 +761,6 @@ small {
     width: 60%;
     height: 20%;
     cursor: pointer; 
-    filter: drop-shadow(2px 2px 25px var(--contact-button-color));
     background-color: var(--text-color);
     transition: .3s;
     box-sizing: border-box;
@@ -850,6 +774,7 @@ small {
     align-items: center;
     text-decoration: none;
     text-align: center;
+    filter: drop-shadow(2px 2px 25px var(--contact-button-color));
 }
 
 .mail:hover {
@@ -961,3 +886,221 @@ small {
 }
 
 /* Media queries */
+@media screen and (max-width: 1400px) {
+    small {
+        position: unset;
+        text-align: center;
+        padding-bottom: 3px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    nav ul {
+        width: 80%;
+    }
+
+    header img:nth-of-type(8) {
+        right: calc(50% - 533px);
+    }
+
+    header img:nth-of-type(10) {
+        right: -10%;
+    }
+
+    #description p {
+        padding: 10px 0;
+    }
+
+    #skills ul {
+        width: 90%;
+    }
+
+    .mail {
+        width: 100%;
+    }
+
+    #contact {
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    /* header */
+    header img:nth-of-type(2) {
+        top: -5%;
+        right: -25%;
+    }
+
+    header img:nth-of-type(3) {
+        top: 5%;
+        left: -5%;
+    }
+
+    header img:nth-of-type(4), header img:nth-of-type(5), header img:nth-of-type(6), header img:nth-of-type(7), header img:nth-of-type(9), header img:nth-of-type(10) {
+        bottom: -25%;
+    }
+
+    header img:nth-of-type(8) {
+        right: calc(50% - 575px);
+        bottom: -25%;
+    }
+
+    header img:last-of-type {
+        bottom: 0;
+    }
+
+    h1, h1 span{
+        font-size: 5rem;
+    }
+
+    h1 {
+        top: calc(50% - 10rem);
+    }
+
+    /* about me section */ 
+    #about-me {
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #presentation {
+        height: auto;
+    }
+
+    #photo {
+        height: unset;
+    }
+
+    #description h2 {
+        font-size: 5rem;
+    }
+
+    #skills {
+        margin: 0 auto;
+        height: auto;
+    }
+
+    #skills ul {
+        width: 100%;
+    }
+
+    /* contact */
+    #contact {
+        width: 95%;
+    }
+
+    .mail {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        max-width: 100%;
+    }
+    /* header */
+    nav ul {
+        width: 100%;
+        margin: 0;
+    }
+
+    .desktop {
+        visibility: hidden;
+    }
+
+    #burger-menu {
+        visibility: visible;
+    }
+
+    #moving-planets {
+        width: 800px;
+        top: 0px;
+        left: -280px;
+    }
+
+    #spaceship-illu {
+        width: 800px;
+        top: 190px;
+    }
+
+    #cloud-left, #cloud-right, #mountain-left, #mountain-right, #sand-dune-left, #sand-dune-right, #astronaut-on-top {
+        width: 700px;
+        height: unset;
+    }
+
+    #sand-dune-left {
+        left: -120px;
+    }
+
+    #sand-dune-right {
+        right: -120px;
+    }
+
+    #floating-objects {
+        width: 800px;
+        bottom: 20px;
+    }
+
+    #astronaut-on-top {
+        right: calc(50% - 350px);
+    }
+
+    h1, h1 span{
+        font-size: 3rem;
+    }
+
+    h1 {
+        top: calc(50% - 6rem);
+    }
+
+    .parallax, .parallaxL, .parallaxR, .parallaxB {
+        transform: none !important;
+        will-change: auto;
+    }
+
+    /* section about-me */
+    #about-me {
+        height: auto;
+    }
+
+    #presentation {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #presentation img:not(#portrait) {
+        position: absolute;
+        width: 20%;
+    }
+
+    #presentation img:not(#portrait):first-of-type {
+        left: 0;
+    }
+
+    #presentation img:not(#portrait):last-of-type {
+        right: 0;
+    }
+
+    #photo {
+        margin: 30px 0 0 0;
+    }
+
+    #skills {
+        width: 95%;
+        background-image: unset;
+        margin-top: 30px;
+    }
+
+    /* footer */
+    #contact {
+        width: 95%;
+        height: 70%;
+    }
+
+    .mail {
+        width: 80%;
+    }
+}

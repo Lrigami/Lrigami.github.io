@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
         <meta name="description" content="Portfolio">
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,7 +17,22 @@
     <body>
         <header>
             <nav id="navbar">
-                <ul>
+                <div id="mobile-menu-container" class="mobile">
+                    <button id="burger-menu"></button>
+                    <div id="mobile-menu">
+                        <ul id="mobile-menu-list" class="close-list">
+                            <li><a href="#about-me">About Me</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact-me">Contact Me</a></li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/prune-thiry-6886a6136/" target="_blank"><img src="img/linkedin-logo.svg" alt="LinkedIn Logo."></a>
+                                <a href="https://github.com/Lrigami" target="_blank"><img src="img/github-logo.svg" alt="GitHub Logo."></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="desktop">
                     <li><a href="#about-me">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact-me">Contact Me</a></li>
@@ -26,16 +41,16 @@
                 </ul>
             </nav>
             <img src="img/header-calque1.png" alt="Illustration of mutliple stars.">
-            <img src="img/header-calque2.png" alt="Illustration of two floating planets.">
-            <img src="img/header-calque3.png" alt="Illustration of a spaceship.">
-            <img class="parallaxL" data-speed="0.6" src="img/header-calque4.png" alt="Illustration of a cloud of pink smoke.">
-            <img class="parallaxR" data-speed="0.6" src="img/header-calque5.png" alt="Illustration of a cloud of pink smoke.">
-            <img class="parallaxR" data-speed="1" src="img/header-calque6.png" alt="Illustration of a mountain.">
-            <img class="parallaxL" data-speed="1" src="img/header-calque7.png" alt="Illustration of a mountain.">
-            <img class="parallaxB" data-speed="2" src="img/header-calque8.png" alt="Illustration of an astronaut holding a flag on a sand dune."> <!-- change the flag star color to match the language -->
-            <img class="parallaxL" data-speed="1.4" src="img/header-calque9.png" alt="Illustration of a sand dune.">
-            <img class="parallaxR" data-speed="1.4" src="img/header-calque10.png" alt="Illustration of a sand dune.">
-            <img src="img/header-calque12.png" alt="Illustration of floating elements.">
+            <img id="moving-planets" src="img/header-calque2.png" alt="Illustration of two floating planets.">
+            <img id="spaceship-illu" src="img/header-calque3.png" alt="Illustration of a spaceship.">
+            <img id="cloud-left" class="parallaxL" data-speed="0.6" src="img/header-calque4.png" alt="Illustration of a cloud of pink smoke.">
+            <img id="cloud-right" class="parallaxR" data-speed="0.6" src="img/header-calque5.png" alt="Illustration of a cloud of pink smoke.">
+            <img id="mountain-right" class="parallaxR" data-speed="1" src="img/header-calque6.png" alt="Illustration of a mountain.">
+            <img id="mountain-left" class="parallaxL" data-speed="1" src="img/header-calque7.png" alt="Illustration of a mountain.">
+            <img id="astronaut-on-top" class="parallaxB" data-speed="2" src="img/header-calque8.png" alt="Illustration of an astronaut holding a flag on a sand dune."> <!-- change the flag star color to match the language -->
+            <img id="sand-dune-left" class="parallaxL" data-speed="1.4" src="img/header-calque9.png" alt="Illustration of a sand dune.">
+            <img id="sand-dune-right" class="parallaxR" data-speed="1.4" src="img/header-calque10.png" alt="Illustration of a sand dune.">
+            <img id="floating-objects" src="img/header-calque12.png" alt="Illustration of floating elements.">
             <h1 class="parallaxR" data-speed="4"><span>THIRY Prune</span><br>Web Developer</h1>
         </header>
 
@@ -61,28 +76,18 @@
                     <ul>
                         <li><img src="img/skills/html5-logo.svg" alt="HTML5 logo" title="HTML5 logo"></li>
                         <li><img src="img/skills/css3-logo.svg" alt="CSS3 logo" title="CSS3 logo"></li>
-                        <li><img src="img/skills/js-logo.svg" alt="JavaScript logo" title="JavaScript logo"></li>
+                        <li><img src="img/skills/javascript-logo.svg" alt="JavaScript logo" title="JavaScript logo"></li>
+                        <li><img src="img/skills/nodejs-logo.svg" alt="Node.js logo" title="Node.js logo"></li>
                         <li><img src="img/skills/react-logo.svg" alt="React Native logo" title="React logo"></li>
+                        <li><img src="img/skills/nextjs-logo.svg" alt="Next.js logo" title="Next.js logo"></li>
+                        <li><img src="img/skills/angular-logo.svg" alt="Angular logo" title="Angular logo"></li>
+                        <li><img src="img/skills/electron-framework-logo.png" alt="Electron Framework Logo" title="Electron framework logo"></li>
+                        <li><img src="img/skills/mongodb-logo.png" alt="MongoDB logo" title="MongoDB logo"></li>
+                        <li><img src="img/skills/postgresql-logo.png" alt="PostgreSQL logo" title="PostgreSQL logo"></li>
+                        <li><img src="img/skills/git-logo.svg" alt="Git logo" title="Git logo"></li>
                     </ul>
                 </div>
 
-                <div id="spaceship-container">
-                    <div id="spaceship">
-                      <div id="wings"></div>
-                      <div id="body">
-                        <div id="tip"></div>
-                        <div id="window"></div>
-                        <div id="line"></div>
-                      </div>
-                      <div class="reactor one"></div>
-                      <div class="reactor two"></div>
-                    </div>
-                    <div id="fire">
-                      <div class="fire one"></div>
-                      <div class="fire two"></div>
-                      <div class="fire three"></div>
-                    </div>
-                  </div>
             </section>
 
             <section id="projects">
