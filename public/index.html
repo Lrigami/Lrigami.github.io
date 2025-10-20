@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
+        <meta name="description" content="Portfolio"> 
+        <link rel="stylesheet" href="./css/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Serif+Text:ital@0;1&family=Nerko+One&family=Notable&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+CU&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <script src="./js/app.js" defer></script>
+        <title>THIRY Prune Portfolio</title>
+    </head>
+
+    <!-- Attention au fait que les id soient exceptionnels, et privilégier au maximum les classes etc. -->
+    <body>
+        <header>
+            <nav id="navbar">
+                <div id="mobile-menu-container" class="mobile">
+                    <button id="burger-menu"></button>
+                    <div id="mobile-menu">
+                        <ul id="mobile-menu-list" class="close-list">
+                            <li><a href="#about-me">About Me</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact-me">Contact Me</a></li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/prune-thiry-6886a6136/" target="_blank"><img src="img/linkedIn-logo.png" alt="LinkedIn Logo."></a>
+                                <a href="https://github.com/Lrigami" target="_blank"><img src="img/github-logo.svg" alt="GitHub Logo."></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="desktop">
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact-me">Contact Me</a></li>
+                    <li><a href="https://www.linkedin.com/in/prune-thiry-6886a6136/" target="_blank"><img src="img/linkedIn-logo.png" alt="LinkedIn Logo."></a></li>
+                    <li><a href="https://github.com/Lrigami" target="_blank"><img src="img/github-logo.svg" alt="GitHub Logo."></a></li>
+                </ul>
+            </nav>
+            <img src="./img/header-calque1.png" alt="Illustration of mutliple stars.">
+            <img id="moving-planets" src="./img/header-calque2.png" alt="Illustration of two floating planets.">
+            <img id="spaceship-illu" src="./img/header-calque3.png" alt="Illustration of a spaceship.">
+            <img id="cloud-left" class="parallaxL" data-speed="0.6" src="./img/header-calque4.png" alt="Illustration of a cloud of pink smoke.">
+            <img id="cloud-right" class="parallaxR" data-speed="0.6" src="./img/header-calque5.png" alt="Illustration of a cloud of pink smoke.">
+            <img id="mountain-right" class="parallaxR" data-speed="1" src="./img/header-calque6.png" alt="Illustration of a mountain.">
+            <img id="mountain-left" class="parallaxL" data-speed="1" src="./img/header-calque7.png" alt="Illustration of a mountain.">
+            <img id="astronaut-on-top" class="parallaxB" data-speed="2" src="./img/header-calque8.png" alt="Illustration of an astronaut holding a flag on a sand dune."> <!-- change the flag star color to match the language -->
+            <img id="sand-dune-left" class="parallaxL" data-speed="1.4" src="./img/header-calque9.png" alt="Illustration of a sand dune.">
+            <img id="sand-dune-right" class="parallaxR" data-speed="1.4" src="./img/header-calque10.png" alt="Illustration of a sand dune.">
+            <img id="floating-objects" src="./img/header-calque12.png" alt="Illustration of floating elements.">
+            <h1 class="parallaxR" data-speed="4"><span>THIRY Prune</span><br>Web Developer</h1>
+        </header>
+
+        <main>
+            <section id="about-me">
+                <div id="presentation">
+                    <img src="img/chevron-constellation-open.png" alt="illustration of a constellation shaped as an open chevron">
+                    <div id="photo">
+                        <img id="portrait" src="img/photo.jpg" alt="Portrait of Thiry Prune.">
+                        <a href="Resume_THIRY_Prune_oct_2025.pdf" download="Resume_Thiry_Prune_oct_25.pdf">
+                            <button>Resume</button>
+                        </a>
+                        <button id="platform-modal-btn"></button>
+                        <div id="platform-modal" class="hidden">
+                           <h3>Activities</h3>
+                           <ul>
+                            <li><span class="platform-title">Root-me:</span><span class="root-me-points"></span> points (<span class="root-me-validations"></span> validations)</li>
+                            <li><span class="platform-title">Over the wire:</span><span>Bandit - lvl 6</span></li>
+                            <li><span class="platform-title">Project Euler:</span><span>16</span> validations</li>
+                            <li><span class="platform-title">Hack The Box:</span><span><a href="HTB_Transcript_THIRY_Prune_20-10-25.pdf" download="HTB_Transcript_THIRY_Prune_20-10-25">Transcript</a></span></li>
+                           </ul> 
+                        </div>
+                    </div>
+                    <div id="description">
+                        <h2>THIRY Prune</h2>
+                        <p>I am a junior developer focusing on back-end development and <span class="highlight">cybersecurity</span>, a field I am trying to transition into. I'm excited to contribute to projects that make a real impact and always eager to learn from others in the field.</p>
+                        <div id="link-btns">
+                            <button><a href=""><img src="./img/github-logo.svg" alt="Github logo">Github</a></button>
+                            <button><a href=""><img src="./img/linkedIn-logo.png" alt="LinkedIn logo">LinkedIn</a></button>
+                            <button><a href=""><img src="./img/email-icon.png" alt="Email icon">Email</a></button>
+                        </div>
+                    </div>
+                    <img src="img/chevron-constellation-close.png" alt="illustration of a constellation shaped as a closed chevron"> 
+                </div>
+
+                <div id="skills">
+                    <h3>Stack</h3>
+                    <div class="stack">
+                        <div>
+                            <h4>Front-end</h4>
+                            <ul>
+                                <li>
+                                    <img src="./img/skills/react-logo.svg" alt="React Native logo">
+                                    <p>React (Expo)</p>
+                                </li>
+                                <li>
+                                    <img src="./img/skills/angular-logo.svg" alt="Angular logo">
+                                    <p class="main-stack">Angular</p>
+                                </li>
+                                <li>
+                                    <img src="./img/skills/electron-framework-logo.png" alt="Electron framework logo">
+                                    <p>Electron</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Back-end & Databases</h4>
+                            <ul>
+                                <li>
+                                    <img src="./img/skills/nodejs-logo.svg" alt="Node.js logo">
+                                    <p class="main-stack">Node.js</p>
+                                </li>
+                                <li>
+                                    <img src="./img/skills/symfony-logo.png" alt="Symfony framework logo">
+                                    <p class="main-stack">Symfony</p>
+                                </li>
+                                <li>
+                                    <img src="./img/skills/mysql-logo.png" alt="MySQL logo">
+                                    <p class="main-stack">MySQL</p>
+                                </li>
+                                <li>
+                                    <img src="./img/skills/mongodb-logo.png" alt="MongoDB logo">
+                                    <p>MongoDB</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Other</h4>
+                            <ul>
+                                <li>
+                                    <img src="./img/skills/c-logo.png" alt="C language logo">
+                                    <p>C</p>
+                                </li>
+                                <li>
+                                    <img src="./img/skills/git-logo.svg" alt="Git logo">
+                                    <p class="main-stack">Git</p>
+                                </li>
+                                <li>
+                                    <img src="./img/skills/docker-logo.png" alt="Docker logo">
+                                    <p>Docker</p>
+                                </li>
+                                <li>
+                                    <img src="./img/skills/godot-engine-logo.png" alt="Godot Engine logo">
+                                    <p>Godot Engine</p>
+                                </li>
+                            </ul>                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <div id="dashboard">
+                    <div id="projects-slider">
+                        <div id="slider-nav">
+                            <button id="slider-before"><span class="material-icons">chevron_left</span></button>
+                            <button id="slider-after"><span class="material-icons">chevron_right</span></button>
+                        </div>
+
+                        <div id="slider-content">
+                            <!-- automatically created in JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact-me">
+                <div id="contact">
+                    <div class="box">
+                        <p>A&nbsp;</p>
+                        <div class="text-container">
+                            <span id="text"></span>
+                            <span class="cursor">|</span>
+                        </div>
+                        <p>?</p>
+                    </div>
+                    <a class="mail" href="mailto:prune.thiry@gmail.com?subject=We%20want%20you%20in%20our%20team!&body=Hello%20Prune%20Thiry,">Contact me</a>
+                    <div id="media">
+                        <a href="https://www.linkedin.com/in/prune-thiry-6886a6136/" target="_blank"><img src="img/linkedIn-logo.png" alt="LinkedIn Logo."></a>
+                        <a href="https://github.com/Lrigami" target="_blank"><img src="img/github-logo.svg" alt="GitHub Logo."></a>
+                    </div>
+                </div>
+                <small>Designed and Developed by Thiry Prune.</small>
+            </section>
+        </main>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

@@ -39,15 +39,31 @@ burgerMenuBtn.onclick = () => {
     mobileMenuList.classList.toggle("close-list");
 }
 
+// platforms
+const rootmepoints = document.getElementsByClassName("root-me-points")[0];
+const rootmevalidations = document.getElementsByClassName("root-me-validations")[0];
+
+fetch('/api/rootme')
+    .then(r => r.json())
+    .then(rootme => {
+        rootmepoints.innerText = rootme.score;
+        rootmevalidations.innerText = rootme.validations.length;        
+    });
+
+const platformModalBtn = document.getElementById("platform-modal-btn");
+const platformModal = document.getElementById("platform-modal");
+platformModalBtn.addEventListener("click", () => {
+    platformModal.classList.toggle("hidden");
+});
 
 // projects solar-system effects
 
 // slider management
-// get data from data.json
+// get data from projects.json
 async function getData() {
-    const json = "./data.json";
     try {
-        const response = await fetch(json);
+        const projects = "./js/projects.json";
+        const response = await fetch(projects);
         if (!response.ok) {
             throw new Error (`Response status: ${response.status}`);
         }
