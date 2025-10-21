@@ -4,7 +4,7 @@
             "design" : "../img/planet4.png", 
             "source" : "", 
             "name" : "Student Booklets", 
-            "description" : "Application that allows instructors at a learning center to manage their courses and students, as well as manage each student's progress reports. Students can access their course schedules and fill out their progress booklets.", 
+            "description" : "Application that allows instructors at a learning center to manage their courses and students, as well as manage each student's progress booklets. Students can access their course schedules and fill out their progress booklets.", 
             "tools" : ["Symfony", "MySQL"],    
             "github" : "https://github.com/Lrigami/livret-de-suivi", 
             "state" : "Completed", 
