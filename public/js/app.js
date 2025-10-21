@@ -72,38 +72,82 @@ async function getData() {
 
         // create slider project content for each project
         for (const project of data.projects) {
+            const projectContainer = document.createElement("div");
+            projectContainer.classList.add("slider-project");
+
+            const projectTitle = document.createElement("h3");
+            projectTitle.innerText = project.name;
+
             const projectContent = document.createElement("div");
-            projectContent.classList.add("slider-project");
+            projectContent.classList.add("project-content");
+            projectContent.style.background = `95% center / 30% auto no-repeat url(${project.design})`;
 
-            const projectViewport = document.createElement("iframe");
-            projectViewport.src = project.source;
+            const projectVision = document.createElement("div");
+            projectVision.classList.add("project-vision");
 
-            const projectDiv = document.createElement("div");
+            const projectVisual = document.createElement("div");
+            projectVisual.classList.add("project-visual");
 
-            projectDiv.innerHTML = `<p><span class="info">Name: </span>${project.name}</p>
-            <p><span class="info">Description: </span>${project.description}</p>
-            <p id="tools"><span class="info">Languages & Techno: </span></p>`;
+            const projectState = document.createElement("div");
+            projectState.innerText = project.state;
 
-            const lastP = projectDiv.querySelector("p:last-of-type");
+            projectState.classList.add(project.state == "Completed" ? "project-state-green" : "project-state-pink");
 
-            for (const tool of project.tools) {
-                const projectTool = document.createElement("span");
-                projectTool.classList.add("tool");
-                projectTool.innerText = `${tool}`;
-                lastP.appendChild(projectTool);
+            const projectImg = document.createElement("img");
+            projectImg.src = project.image;
+            projectImg.alt = project.alt;
+
+            const projectBtns = document.createElement("div");
+            projectBtns.classList.add("project-btns");
+
+            if (project.source !== "") {
+                const goToProject = document.createElement("a");
+                goToProject.href = project.source; 
+                goToProject.target = "_blank";
+                goToProject.innerText = "View project";
+                projectBtns.appendChild(goToProject);               
             }
 
-            projectDiv.innerHTML += `<p><span class="info">GitHub: </span><a href=${project.github} target="_blank">Project on GitHub</a></p>`;
+            const projectGithub = document.createElement("a");
+            projectGithub.href = project.github;
+            projectGithub.target = "_blank";
+            projectGithub.innerText = "View on GitHub";
+            projectBtns.appendChild(projectGithub);
 
-            let planetDesign = document.createElement("img");
-            planetDesign.src = project.design;
-            planetDesign.classList.add("planet-design");
+            const projectTechno = document.createElement("div");
+            projectTechno.classList.add("project-techno");
 
-            projectContent.appendChild(planetDesign);
-            projectContent.appendChild(projectViewport);
-            projectContent.appendChild(projectDiv);
+            project.tools.forEach(tool => {
+                let projectTool = document.createElement("p");
+                projectTool.classList.add("project-tool");
+                projectTool.innerText = tool;
+                projectTechno.appendChild(projectTool);
+            })
 
-            document.getElementById("slider-content").appendChild(projectContent);
+            projectVisual.appendChild(projectImg);
+            projectVisual.appendChild(projectState);
+            projectVisual.appendChild(projectBtns);
+            projectVision.appendChild(projectVisual);
+            projectVision.appendChild(projectTechno);
+
+            const projectAbout = document.createElement("div");
+            projectAbout.classList.add('project-about');
+
+            const projectDescriptionContainer = document.createElement("div");
+            projectDescriptionContainer.classList.add("project-div");
+            const projectDescription = document.createElement("p");
+            projectDescription.innerText = project.description;
+
+            projectDescriptionContainer.appendChild(projectDescription);
+
+            projectAbout.appendChild(projectDescriptionContainer);
+
+            projectContent.appendChild(projectVision);
+            projectContent.appendChild(projectAbout);
+
+            projectContainer.appendChild(projectTitle);
+            projectContainer.appendChild(projectContent);
+            document.getElementById("slider-content").appendChild(projectContainer);
         }
 
     } catch (error) {

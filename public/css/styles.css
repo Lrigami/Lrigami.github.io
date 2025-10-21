@@ -609,21 +609,27 @@ section {
 /* slider */
 #projects-slider {
     position: relative;
-    width: 95%;
-    height: 62%;
+    width: 98%;
+    height: 95%;
     z-index: 25;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    background-color: white;
+    color: white;
     margin: auto;
 }
 
 #projects-slider h3 {
     font-size: 2.5rem;
     font-family: var(--robotic);
+    max-width: 350px ;
+    height: 180px;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    left: -5px;
 }
 
 #slider-nav {
@@ -639,25 +645,18 @@ section {
     width: 50px;
     border-radius: var(--round);
     box-sizing: border-box;
-    border: 3px dotted black;
+    border: 3px dotted white;
     background-color: transparent;
+    color: white;
     cursor: pointer;
 }
 
-#slider-after:hover {
+#slider-after:hover, #slider-before:hover span {
     animation: nav-button 10s linear infinite;
 }
 
-#slider-before:hover {
+#slider-before:hover, #slider-after:hover span {
     animation: nav-button-inverted 10s linear infinite;
-}
-
-#slider-after:hover span {
-    animation: nav-button-inverted 10s linear infinite;
-}
-
-#slider-before:hover span {
-    animation: nav-button 10s linear infinite;
 }
 
 #slider-nav button span {
@@ -667,8 +666,9 @@ section {
 #slider-content {
     width: 80%;
     max-width: 1200px;
-    height: 82%;
-    position: relative;
+    height: 80%;
+    position: absolute;
+    top: 0;
     display: flex;
     overflow: hidden;
     margin: 10px auto;
@@ -678,42 +678,151 @@ section {
     min-width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
     position: relative;
 }
 
-.slider-project div {
+.project-content {
+    position: relative;
+    width: 99%;
+    height: 420px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.planet-design {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    width: 40px;
-    height: 40px;
-}
-
-iframe {
-    width: 400%;
-    max-width: 800px;
-    height: 100%;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 10px;
-}
-
-#tools {
-    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.info {
+.project-div {
+    position: relative;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+.project-vision {
+    position: relative;
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-visual {
+    position: relative;
+}
+
+.project-visual:hover .project-btns {
+    display: flex;
+}
+
+.project-vision img {
+    position: relative;
+    max-width: 100%;
+    max-height: 370px;
+}
+
+.project-state-green {
+    background-color: var(--neon-green);
+    color: black;
+    padding: 2px 10px;
+    border-radius: 50px;
+    width: fit-content;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.project-state-pink {
+    background-color: var(--neon-pink);
+    
+    color: black;
+    padding: 2px 10px;
+    border-radius: 50px;
+    width: fit-content;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.project-btns {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-btns a {
+    height: 50px;
+    width: 140px;
+    background-color: var(--line-color);
+    color: black;
+    border-radius: 25px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    filter: drop-shadow(3px 3px 3px hsl(0, 0%, 59%));
+}
+
+.project-btns a:hover {
+    background-color: rgb(255, 240, 255);
+}
+
+.project-btns a:focus, .project-btns a:active {
+    background-color: hsl(300, 100%, 90%);
+    color: var(--contact-button-color);
+}   
+
+.project-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 70px;
+    color: black;
+    height: 100%;
+    max-width: 40%;
+}
+
+.project-about div {
+    height: fit-content;
+    padding: 40px 10px;
+    font-size: 20px;
+}
+
+.project-techno {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.project-tool {
     font-family: var(--robotic);
-    font-size: 1.3rem;
+    min-height: 50px;
+    min-width: 140px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--neon-blue), var(--neon-pink));
+    border-width: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .tool {

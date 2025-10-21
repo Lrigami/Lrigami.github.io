@@ -1,44 +1,59 @@
 {
     "projects" : [
         {
-            "design" : "./img/planet4.png", 
+            "design" : "../img/planet4.png", 
             "source" : "", 
             "name" : "Student Booklets", 
             "description" : "Application that allows instructors at a learning center to manage their courses and students, as well as manage each student's progress reports. Students can access their course schedules and fill out their progress booklets.", 
             "tools" : ["Symfony", "MySQL"],    
-            "github" : "https://github.com/Lrigami/livret-de-suivi"
+            "github" : "https://github.com/Lrigami/livret-de-suivi", 
+            "state" : "Completed", 
+            "image" : "../img/projects/booklet_2.png", 
+            "alt" : ""
         }, 
         {
-            "design" : "./img/planet3.png", 
+            "design" : "../img/planet3.png", 
             "source" : "", 
             "name" : "Ultimate Planner", 
-            "description" : "Management and planning app (to-do lists, calendar, notes, habit trackers, etc.) The aim of this app is to be as comprehensive as possible so that users don't have to use several different apps.\nUltimate Planner is a personal project that primarily meets a personal need, and is intended to be free and accessible to all.\nCurrently under development. ", 
+            "description" : "Management and planning app (to-do lists, calendar, notes, habit trackers, etc.) The aim of this app is to be as comprehensive as possible so that users don't have to use several different apps.\nUltimate Planner is a personal project that primarily meets a personal need, and is intended to be free and accessible to all.", 
             "tools" : ["Angular", "PostgreSQL", "Node.js"], 
-            "github" : "https://github.com/Lrigami/Ultimate-Planner"
+            "github" : "https://github.com/Lrigami/Ultimate-Planner", 
+            "state" : "Under development", 
+            "image" : "../img/projects/ultimate_planner_1.jpg", 
+            "alt" : ""
         },
         {
-            "design" : "./img/planet2.png", 
+            "design" : "../img/planet2.png", 
             "source" : "", 
             "name" : "Twitch-OBS Bot", 
             "description" : "Twitch OBS Bot is a mini-app that allows streamers to trigger scenes in OBS Studio via Twitch chat commands. This project automates livestreaming and makes it interactive, without requiring streamers to have development experience.", 
             "tools" : ["Electron", "Node.js"], 
-            "github" : "https://github.com/LrigamiProjects/Twitch_OBS_Bot"
+            "github" : "https://github.com/LrigamiProjects/Twitch_OBS_Bot", 
+            "state" : "Completed", 
+            "image" : "../img/projects/twitch-bot-obs.png", 
+            "alt" : ""
         }, 
         {
-            "design" : "./img/planet1.png", 
+            "design" : "../img/planet1.png", 
             "source" : "", 
             "name" : "Should I buy it?", 
             "description" : "Mobile app that guides users through a series of questions to help them decide whether or not a purchase is necessary. Part of a more mindful approach to consumption. Users can then view their purchases and non-purchases in lists, as well as see the total amount saved by not making certain purchases.", 
             "tools" : ["React Expo"], 
-            "github" : "https://github.com/Lrigami/Shoud_I_Buy_It"
+            "github" : "https://github.com/Lrigami/Shoud_I_Buy_It", 
+            "state" : "Completed", 
+            "image" : "../img/projects/should-i-buy-it_2.png", 
+            "alt" : ""
         },
         {
-            "design" : "./img/planet1.png", 
+            "design" : "../img/planet4.png", 
             "source" : "https://oiseaux-de-france.vercel.app/", 
             "name" : "Oiseaux de France", 
             "description" : "Website that lists birds in France and provides detailed information on each species, such as their distribution area. Database still being populated.", 
             "tools" : ["JavaScript", "Supabase (PostgreSQL)", "Vercel"], 
-            "github" : "https://github.com/Lrigami/Oiseaux_De_France"
+            "github" : "https://github.com/Lrigami/Oiseaux_De_France", 
+            "state" : "Expanding database", 
+            "image" : "../img/projects/oiseaux-de-france_1.png", 
+            "alt" : ""
         }
     ]
 }
