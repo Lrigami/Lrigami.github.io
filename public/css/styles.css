@@ -334,6 +334,7 @@ section {
     align-items: center;
     height: 58%;
     position: relative;
+    padding-top: 60px;
 }
 
 #presentation img:not(#portrait) {
@@ -514,14 +515,12 @@ section {
 
 /* skills  */
 #skills {
-    width: 80%;
-    height: 40%;
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--text-color);
+    padding: 25px 0;
 }
 
 #skills h3 {
@@ -572,14 +571,14 @@ section {
 }
 
 /* Projects section */
-#projects {
+#projects, #timeline {
     position: relative;
     display: flex;
     margin-top: 50px;
     scroll-margin-top: 50px;
 }
 
-#projects h2 {
+#projects h2, #timeline h2 {
     font-size: 5rem;
     color: var(--text-color);
     writing-mode: vertical-rl;
@@ -831,6 +830,48 @@ section {
     background-color: var(--techno-background-color);
     box-sizing: border-box;
     border-radius: 2px;
+}
+
+/* Timeline section */
+#timeline {
+    color: white;
+}
+
+#working-on {
+    display: flex;
+    flex-direction: column;
+    width: 50dvw;
+    position: relative;
+    padding-top: 10px;
+}
+
+#day-to-day {
+    height: 50%;
+    width: 100%;
+}
+
+#day-to-day h3 {
+    font-size: 32px;
+    text-align: center;
+}
+
+#my_dataviz {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+text {
+    color: white;
+    fill: white !important;
+}
+
+.tooltip {
+    width: 600px;
+    color: var(--contact-button-color);
 }
 
 /* Contact Me section */
@@ -1153,6 +1194,27 @@ small {
     }
 }
 
+@media screen and (max-width: 575px) {
+    #presentation {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #chevron-open, #chevron-close {
+        position: absolute;
+        z-index: 0;
+        width: 20% !important;
+    }
+
+    #chevron-open {
+        left: 0;
+    }
+
+    #chevron-close {
+        right: 0;
+    }
+}
+
 @media screen and (max-width: 450px) {
     body {
         max-width: 100%;
@@ -1221,25 +1283,6 @@ small {
     /* section about-me */
     #about-me {
         height: auto;
-    }
-
-    #presentation {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    #chevron-open, #chevron-close {
-        position: absolute;
-        z-index: 0;
-        width: 20%;
-    }
-
-    #chevron-open {
-        left: 0;
-    }
-
-    #chevron-close {
-        right: 0;
     }
 
     #photo {

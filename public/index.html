@@ -10,6 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Serif+Text:ital@0;1&family=Nerko+One&family=Notable&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+CU&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
         <script src="./js/app.js" defer></script>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="./js/heatmap.js" defer></script>
         <title>THIRY Prune Portfolio</title>
     </head>
 
@@ -70,9 +72,9 @@
                            <h3>Activities</h3>
                            <ul>
                             <li><span class="platform-title">Root-me:</span><span class="root-me-points"></span> points (<span class="root-me-validations"></span> validations)</li>
-                            <li><span class="platform-title">Over the wire:</span><span>Bandit - lvl 6</span></li>
-                            <li><span class="platform-title">Project Euler:</span><span>16</span> validations</li>
-                            <li><span class="platform-title">Hack The Box:</span><span><a href="HTB_Transcript_THIRY_Prune_20-10-25.pdf" download="HTB_Transcript_THIRY_Prune_20-10-25">Transcript</a></span></li>
+                            <li><span class="platform-title">Over the wire:</span><span> Bandit - lvl 6</span></li>
+                            <li><span class="platform-title">Project Euler:</span><span> 16</span> validations</li>
+                            <li><span class="platform-title">Hack The Box:</span><span><a href="HTB_Transcript_THIRY_Prune_20-10-25.pdf" download="HTB_Transcript_THIRY_Prune_20-10-25"> Transcript</a></span></li>
                            </ul> 
                         </div>
                     </div>
@@ -172,6 +174,62 @@
             </section>
 
             <section id="timeline">
+                <h2>Timeline</h2>
+                <div>
+                    <div>
+                        <p>2025 - 2026</p>
+                        <p>Professional Training:&nbsp;Application Designer and Developer</p>
+                        <p><ul>
+                                <li>React Native, PHP, MySQL, Symfony, Godot Engine</li>
+                                <li>FreeCodeCamp Certifications (<a href="https://www.freecodecamp.org/certification/lrigami/responsive-web-design" target="_blank">Responsive Web Design</a>, <a href="https://www.freecodecamp.org/certification/lrigami/javascript-algorithms-and-data-structures-v8" target="_blank">JavaScript Algorithms and Data Structures</a>, <a href="https://www.freecodecamp.org/certification/lrigami/back-end-development-and-apis" target="_blank">Back End Development and APIs</a>)</li>
+                                <li>Main project:&nbsp;Ultimate Planner</li>
+                            </ul></p>
+                    </div>
+                    <div>
+                        <p>2024 - 2025</p>
+                        <p>Professional Training:&nbsp;Web and Mobile Web Developer</p>
+                        <p>
+                            <ul>
+                                <li>Angular, Electron, JavaScript, APIs, PostgreSQL, MongoDB, Node.js, HTML, CSS</li>
+                                <li>FreeCodeCamp Certifications (<a href="https://www.freecodecamp.org/certification/lrigami/responsive-web-design" target="_blank">Responsive Web Design</a>, <a href="https://www.freecodecamp.org/certification/lrigami/javascript-algorithms-and-data-structures-v8" target="_blank">JavaScript Algorithms and Data Structures</a>, <a href="https://www.freecodecamp.org/certification/lrigami/back-end-development-and-apis" target="_blank">Back End Development and APIs</a>)</li>
+                                <li>Main project:&nbsp;Ultimate Planner</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div id="working-on">                
+                    <div id="day-to-day">
+                        <h3>Day-to-day Work</h3>
+                        <div id="my_dataviz"></div>
+                    </div>
+                    <div>
+                        <h3>Currently working on</h3>
+                        <div>
+                            <div>
+                                <h4>A course</h4>
+                                <div>
+                                    <p>CS50x</p>
+                                    <a href="https://cs50.harvard.edu/x/" target="_blank">More</a>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>A certification</h4>
+                                <div>
+                                    <p>CompTia Security+</p>
+                                    <a href="https://www.comptia.org/en-us/certifications/security/" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>A project</h4>
+                                <div>
+                                    <p>Ultimate Planner v.1.1.0</p>
+                                    <a href="https://github.com/Lrigami/Ultimate-Planner" target="_blank"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </section>
 
@@ -196,5 +254,6 @@
         </main>
 
         <script src="./js/script.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     </body>
 </html>
