@@ -51,7 +51,7 @@
             "description" : "Website that lists birds in France and provides detailed information on each species, such as their distribution area. Database still being populated.", 
             "tools" : ["JavaScript", "Supabase (PostgreSQL)", "Vercel"], 
             "github" : "https://github.com/Lrigami/Oiseaux_De_France", 
-            "state" : "Expanding database", 
+            "state" : "Under development", 
             "image" : "../img/projects/oiseaux-de-france_1.png", 
             "alt" : ""
         }

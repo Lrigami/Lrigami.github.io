@@ -59,7 +59,7 @@ d3.csv("../day-to-day-data.csv", function(data) {
   }
   var mousemove = function(d) {
     tooltip
-      .html(`<p style="text-decoration: underline">${d.Date}&nbsp;:</p><ul><li>${d.Activity1}</li><li>${d.Activity2}</li><li>${d.Activity3}</li><li>${d.Activity4}</li></ul>`)
+      .html(`<p style="text-decoration: underline" class="bold">${d.Date}&nbsp;:</p><ul><li>${d.Activity1}</li><li>${d.Activity2}</li><li>${d.Activity3}</li><li>${d.Activity4}</li></ul>`)
       .style("left", (d3.mouse(this)[0]+70) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
@@ -118,4 +118,4 @@ svg.append("text")
         .style("fill", "grey")
         .style("max-width", 400)
         .style("text-align", "center")
-        .text("Hover to know on what I've been working since the beginning of the vocational training.");
+        .text("Hover to know on what I've been working since the beginning of the professional training.");
