@@ -575,6 +575,11 @@ section {
 }
 
 /* Projects section */
+#projects {
+    display: flex;
+    justify-content: center;
+}
+
 #projects, #timeline {
     position: relative;
     display: flex;
@@ -599,7 +604,7 @@ section {
     position: absolute;
     background: no-repeat top url("../img/dashboard_up_copy.PNG"), no-repeat bottom url("../img/dashboard_down_copy.PNG");
     height: calc(100dvh - 60px);
-    width: calc(100dvw - 101px);
+    width: calc(100dvw - 15%);
     max-width: 1600px;
     border: 5px solid #112964;
     border-radius: 10px;
@@ -876,6 +881,10 @@ section {
     text-decoration: underline var(--neon-pink);
 }
 
+#working-on {
+    width: calc(100% - 115px) !important;
+}
+
 #working-on, #working-timeline {
     display: flex;
     flex-direction: column;
@@ -891,6 +900,7 @@ section {
     height: 50%;
     width: 100%;
     position: relative;
+    margin: 0 2px;
 }
 
 .border-section {
@@ -1007,17 +1017,56 @@ text {
     flex-direction: column;
 }
 
-#contact {
+#contact, #contact-form {
     margin: auto;
     position: relative;
     width: 40%;
-    height: 60%;
     font-size: 3rem;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
+}
+
+#contact-form {
+    width: 100%;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 80%;
+    font-size: 18px;
+}
+
+#contact-form input {
+    height: 35px;
+}
+
+#contact-form button {
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: var(--line-color);
+    color: black;
+}
+
+#contact-form button:hover {
+    background-color: rgb(255, 240, 255);
+}
+
+#contact-form button:focus, #contact-form button:active {
+    background-color: hsl(300, 100%, 90%);
+    color: var(--contact-button-color);
+}
+
+#form-response {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    color: var(--contact-button-color);
+    text-align: center;
 }
 
 small {
@@ -1075,18 +1124,18 @@ small {
     gap: 20px;
 }
 
+#media img {
+    width: 50px;
+}
+
 /* Animations */
 @keyframes levitating {
-    0% {
+    0%, 100% {
 
     }
 
     50% {
         transform: translateY(1%);
-    }
-
-    100% {
-
     }
 }
 
@@ -1125,16 +1174,12 @@ small {
 }
 
 @keyframes css-spaceship {
-    0% {
+    0%, 100% {
 
     }
 
     50% {
         bottom: 120%;
-    }
-
-    100% {
-
     }
 }
 
@@ -1218,12 +1263,11 @@ small {
     }
 
     #working-timeline, #working-on {
-        width: 99%;
+        width: 98% !important;
     }
 
     #dashboard {
         width: 100dvw;
-        left: unset;
     }
 
     .mail {
@@ -1457,6 +1501,7 @@ small {
     /* timeline */
     #working-on {
         height: unset;
+        width: calc(98% - 4px) !important;
     }
 
     #current-work-div {

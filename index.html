@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
-        <meta name="description" content="THIRY Prune Portfolio"> 
+        <meta name="description" content="THIRY Prune Portfolio">
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico"> 
         <link rel="stylesheet" href="./css/styles.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +56,7 @@
             <img id="sand-dune-left" class="parallaxL" data-speed="1.4" src="./img/header-calque9.png" alt="Illustration of a sand dune.">
             <img id="sand-dune-right" class="parallaxR" data-speed="1.4" src="./img/header-calque10.png" alt="Illustration of a sand dune.">
             <img id="floating-objects" src="./img/header-calque12.png" alt="Illustration of floating elements.">
-            <h1 class="parallaxR" data-speed="4"><span>THIRY Prune</span><br>Web Developer</h1>
+            <h1 class="parallaxT" data-speed="4"><span>THIRY Prune</span><br>Junior Developer</h1>
         </header>
 
         <main>
@@ -71,7 +72,7 @@
                         <div id="platform-modal" class="hidden">
                            <h3>Activities</h3>
                            <ul>
-                            <li><span class="platform-title">Root-me:</span><span class="root-me-points"></span> points (<span class="root-me-validations"></span> validations)</li>
+                            <li><span class="platform-title">Root-me:</span>&nbsp;<span class="root-me-points"></span> points (<span class="root-me-validations"></span> validations)</li>
                             <li><span class="platform-title">Over the wire:</span><span> Bandit - lvl 6</span></li>
                             <li><span class="platform-title">Project Euler:</span><span> 16</span> validations</li>
                             <li><span class="platform-title">Hack The Box:</span><span><a href="HTB_Transcript_THIRY_Prune_20-10-25.pdf" download="HTB_Transcript_THIRY_Prune_20-10-25"> Transcript</a></span></li>
@@ -241,17 +242,24 @@
                         </div>
                         <p>?</p>
                     </div>
-                    <a class="mail" href="mailto:prune.thiry@gmail.com?subject=We%20want%20you%20in%20our%20team!&body=Hello%20Prune%20Thiry,">Contact me</a>
+                    <a class="mail" href="#contact-form">Contact me</a>
                     <div id="media">
                         <a href="https://www.linkedin.com/in/prune-thiry-6886a6136/" target="_blank"><img src="img/linkedIn-logo.png" alt="LinkedIn Logo."></a>
                         <a href="https://github.com/Lrigami" target="_blank"><img src="img/github-logo.svg" alt="GitHub Logo."></a>
                     </div>
+                    <form id="contact-form" class="hidden">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Message" rows="6" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                    <div id="form-response"></div>
                 </div>
                 <small>Designed and Developed by Thiry Prune.</small>
             </section>
         </main>
 
-        <script src="./js/script.js"></script>
+        <script src="./js/typing.js"></script>
         <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     </body>
 </html>

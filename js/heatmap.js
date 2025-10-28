@@ -13,7 +13,7 @@ var svg = d3.select("#my_dataviz")
         "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("../day-to-day-data.csv", function(data) {
+d3.json("../portfolio/api/heatmap-data.php", function(data) {
 
   // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
   var myWeeks = d3.map(data, function(d){return d.Semaine;}).keys()
@@ -85,7 +85,7 @@ d3.csv("../day-to-day-data.csv", function(data) {
       .attr("ry", 4)
       .attr("width", 20 )
       .attr("height", 20 )
-      .style("fill", function(d) { return myColor(d.ActivityNb)} )
+      .style("fill", function(d) { return myColor(Number(d.ActivityNb))} )
       .style("stroke-width", 4)
       .style("stroke", d => {
             const [day, month, year] = d.Date.split("/");
@@ -97,8 +97,6 @@ d3.csv("../day-to-day-data.csv", function(data) {
     .on("mousemove", mousemove)
     .on("mouseleave", mouseleave)
 })
-
-console.log(new Date("25/09/2025"), new Date());
 
 // Add title to graph
 svg.append("text")

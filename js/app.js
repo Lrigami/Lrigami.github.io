@@ -3,6 +3,7 @@ let parallax = document.querySelectorAll(".parallax");
 let parallaxL = document.querySelectorAll(".parallaxL");
 let parallaxR = document.querySelectorAll(".parallaxR");
 let parallaxB = document.querySelectorAll(".parallaxB");
+let parallaxT = document.querySelectorAll(".parallaxT");
 
 window.addEventListener("scroll", () => {
     if (window.innerWidth < 450) return;
@@ -23,10 +24,14 @@ window.addEventListener("scroll", () => {
         let speed = element.dataset.speed;
         element.style.transform = `translateY(${scroll * speed}px)`;
     })
+
+    parallaxT.forEach((element) => {
+        let speed = element.dataset.speed;
+        element.style.transform = `translateY(-${scroll * speed}px)`;
+    })
 });
 
 // navigation
-
 let mobileMenuContainer = document.getElementById("mobile-menu-container");
 let mobileMenu = document.getElementById("mobile-menu");
 let burgerMenuBtn = document.getElementById("burger-menu");
@@ -43,7 +48,7 @@ burgerMenuBtn.onclick = () => {
 const rootmepoints = document.getElementsByClassName("root-me-points")[0];
 const rootmevalidations = document.getElementsByClassName("root-me-validations")[0];
 
-fetch('/api/rootme')
+fetch('../portfolio/api/rootme.php')
     .then(r => r.json())
     .then(rootme => {
         rootmepoints.innerText = rootme.score;
@@ -56,16 +61,13 @@ platformModalBtn.addEventListener("click", () => {
     platformModal.classList.toggle("hidden");
 });
 
-// projects solar-system effects
-
 // slider management
 // get data from projects.json
 async function getData() {
     try {
-        const projects = "./js/projects.json";
-        const response = await fetch(projects);
+        const response = await fetch("../portfolio/api/projects.php");
         if (!response.ok) {
-            throw new Error (`Response status: ${response.status}`);
+            throw new Error(`Response status: ${response.status}`);
         }
 
         const data = await response.json();
@@ -90,8 +92,7 @@ async function getData() {
 
             const projectState = document.createElement("div");
             projectState.innerText = project.state;
-
-            projectState.classList.add(project.state == "Completed" ? "project-state-green" : "project-state-pink");
+            projectState.classList.add(project.state === "Completed" ? "project-state-green" : "project-state-pink");
 
             const projectImg = document.createElement("img");
             projectImg.src = project.image;
@@ -118,11 +119,11 @@ async function getData() {
             projectTechno.classList.add("project-techno");
 
             project.tools.forEach(tool => {
-                let projectTool = document.createElement("p");
+                const projectTool = document.createElement("p");
                 projectTool.classList.add("project-tool");
                 projectTool.innerText = tool;
                 projectTechno.appendChild(projectTool);
-            })
+            });
 
             projectVisual.appendChild(projectImg);
             projectVisual.appendChild(projectState);
@@ -139,7 +140,6 @@ async function getData() {
             projectDescription.innerText = project.description;
 
             projectDescriptionContainer.appendChild(projectDescription);
-
             projectAbout.appendChild(projectDescriptionContainer);
 
             projectContent.appendChild(projectVision);
@@ -173,8 +173,6 @@ nextButton.onclick = () => {
     const sliderContent = document.getElementById("slider-content");
     const sliderWidth = sliderContent.offsetWidth;
     sliderContent.scrollLeft += sliderWidth;
-    const scrollLeft = sliderContent.scrollLeft;
-    const sliderProject = document.querySelectorAll(".slider-project");
 }
 
 // When I click on a planet, the slider display the right project                           
@@ -204,3 +202,24 @@ function showSlider(p) {
     let sliderWidth = sliderContent.offsetWidth;
     sliderContent.scrollLeft = (sliderWidth * (p-1));
 }
+
+// mail contact
+const contactBtn = document.querySelector(".mail");
+const contactForm = document.getElementById("contact-form");
+
+contactBtn.addEventListener('click', () => {
+    contactForm.classList.toggle("hidden");
+})
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const response = await fetch('../portfolio/api/mail.php', {
+        method: 'POST',
+        body: formData
+    });
+    const result = await response.json();
+    document.getElementById('form-response').innerText = 
+        result.status === 'success' ? "Message envoyé !" : "Erreur : " + result.message;
+    contactForm.classList.toggle("hidden");
+});
