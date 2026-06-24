@@ -1,5 +1,5 @@
 <?php
-require '../../../config.php';
+require '../../config.php';
 
 $host = 'thiryprportfolio.mysql.db';
 $dbname = 'thiryprportfolio';

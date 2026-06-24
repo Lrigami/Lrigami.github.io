@@ -13,7 +13,7 @@ var svg = d3.select("#my_dataviz")
         "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.json("../portfolio/api/heatmap-data.php", function(data) {
+d3.json("../api/heatmap-data.php", function(data) {
 
   // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
   var myWeeks = d3.map(data, function(d){return d.Semaine;}).keys()
@@ -63,6 +63,13 @@ d3.json("../portfolio/api/heatmap-data.php", function(data) {
       .style("left", (d3.mouse(this)[0]+70) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
+  var mouseclick = function(d) {
+    tooltip
+      .html(`<p style="text-decoration: underline" class="bold">${d.Date}&nbsp;:</p><ul><li>${d.Activity1}</li><li>${d.Activity2}</li><li>${d.Activity3}</li><li>${d.Activity4}</li></ul>`)
+      .style("left", (d3.mouse(this)[0]+70) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+      .style("opacity", 1)
+  }
   var mouseleave = function(d) {
     tooltip
       .style("opacity", 0)
@@ -96,6 +103,7 @@ d3.json("../portfolio/api/heatmap-data.php", function(data) {
     .on("mouseover", mouseover)
     .on("mousemove", mousemove)
     .on("mouseleave", mouseleave)
+    .on("click", mouseclick)
 })
 
 // Add title to graph

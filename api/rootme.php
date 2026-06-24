@@ -1,6 +1,6 @@
 <?php
 // rootme.php
-require '../../../config.php';
+require '../../config.php';
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");

@@ -4,6 +4,7 @@ let parallaxL = document.querySelectorAll(".parallaxL");
 let parallaxR = document.querySelectorAll(".parallaxR");
 let parallaxB = document.querySelectorAll(".parallaxB");
 let parallaxT = document.querySelectorAll(".parallaxT");
+const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
     if (window.innerWidth < 450) return;
@@ -29,6 +30,12 @@ window.addEventListener("scroll", () => {
         let speed = element.dataset.speed;
         element.style.transform = `translateY(-${scroll * speed}px)`;
     })
+
+    let navbarNoopacity = navbar.dataset.noopacity;
+    let newNavbarOpacity = `${navbarNoopacity + ((scroll/100)/8)}`;
+    let currentNavbarColor = getComputedStyle(navbar).backgroundColor;
+    let rgbaNavbarColor = currentNavbarColor.replace(/rgba?\((\d+), (\d+), (\d+),? ?[\d\.]*\)/, `rgba($1, $2, $3, ${newNavbarOpacity - 0.2})`);
+    navbar.style.backgroundColor = rgbaNavbarColor;
 });
 
 // navigation
@@ -48,7 +55,7 @@ burgerMenuBtn.onclick = () => {
 const rootmepoints = document.getElementsByClassName("root-me-points")[0];
 const rootmevalidations = document.getElementsByClassName("root-me-validations")[0];
 
-fetch('../portfolio/api/rootme.php')
+fetch('../api/rootme.php')
     .then(r => r.json())
     .then(rootme => {
         rootmepoints.innerText = rootme.score;
@@ -65,7 +72,7 @@ platformModalBtn.addEventListener("click", () => {
 // get data from projects.json
 async function getData() {
     try {
-        const response = await fetch("../portfolio/api/projects.php");
+        const response = await fetch("../api/projects.php");
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
@@ -214,7 +221,7 @@ contactBtn.addEventListener('click', () => {
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const response = await fetch('../portfolio/api/mail.php', {
+    const response = await fetch('../api/mail.php', {
         method: 'POST',
         body: formData
     });
