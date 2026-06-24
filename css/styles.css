@@ -68,6 +68,7 @@ nav {
     height: 60px;
     display: flex;
     z-index: 100;
+    background-color: rgba(12, 13, 70, 00);
 }
 
 nav ul {
@@ -583,8 +584,8 @@ section {
 #projects, #timeline {
     position: relative;
     display: flex;
-    margin-top: 50px;
-    scroll-margin-top: 50px;
+    margin-top: 60px;
+    scroll-margin-top: 60px;
     padding-left: 100px;
     width: 100%;
 }
@@ -597,13 +598,14 @@ section {
     position: absolute;
     top: -40px;
     left: 2px;
+    z-index: 999;
 }
 
 /* Dashboard */
 #dashboard {
     position: absolute;
     background: no-repeat top url("../img/dashboard_up_copy.PNG"), no-repeat bottom url("../img/dashboard_down_copy.PNG");
-    height: calc(100dvh - 60px);
+    height: calc(100dvh - 70px);
     width: calc(100dvw - 15%);
     max-width: 1600px;
     border: 5px solid #112964;
@@ -637,8 +639,8 @@ section {
     height: 180px;
     margin-top: 20px;
     text-align: center;
-    position: relative;
-    left: -5px;
+    position: absolute;
+    top: 0;
 }
 
 #slider-nav {
@@ -675,7 +677,7 @@ section {
 #slider-content {
     width: 80%;
     max-width: 1200px;
-    height: 80%;
+    height: 87%;
     position: absolute;
     top: 0;
     display: flex;
@@ -689,14 +691,15 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     position: relative;
 }
 
 .project-content {
     position: relative;
+    top: 85px;
     width: 99%;
-    height: 420px;
     display: flex;
     flex-direction: row; 
     justify-content: space-between;
@@ -845,6 +848,7 @@ section {
 /* Timeline section */
 #timeline {
     color: white;
+    width: calc(100dvw - 120px) !important;
 }
 
 #timeline h2 {
@@ -853,7 +857,7 @@ section {
 
 #working-timeline {
     padding: 10px 0;
-    overflow: scroll;
+    overflow: auto;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -892,7 +896,7 @@ section {
     margin: 5px;
     box-sizing: border-box;
     width: calc(50% - 65px);
-    height: calc(100dvh - 60px);
+    height: calc(100dvh - 70px);
     position: relative;
 }
 
@@ -1224,6 +1228,8 @@ small {
 
     #timeline {
         flex-direction: column;
+        width: 100dvw !important;
+        align-items: center;
     }
 
     #working-timeline, #working-on {
@@ -1276,6 +1282,69 @@ small {
 
     #contact {
         height: 70%;
+    }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 500px) {
+    #dashboard {
+        background: none;
+    }
+
+    #slider-content {
+        position: unset;
+        height: 100%;
+    }
+
+    #projects-slider h3 {
+        font-size: 1.4rem;
+        max-width: unset;
+        height: unset;
+        margin-top: unset;
+    }
+
+    .project-content {
+        top: unset;
+        justify-content: space-around;
+    }
+
+    .project-visual {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-visual img {
+        max-height: 190px;
+    }
+
+    .project-techno {
+        gap: 5px;
+    }
+
+    .project-tool {
+        min-height: 25px;
+        min-width: 90px;
+        font-size: 12px;
+    }
+
+    .project-about div {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #working-timeline, #working-on {
+        height: unset;
+    }
+
+    .tooltip {
+        margin-bottom: 5px;
+    }
+
+    #current-work-div {
+        margin-bottom: 5px;
+    }
+
+    #contact-me {
+        min-height: 200dvh;
     }
 }
 
@@ -1346,6 +1415,7 @@ small {
         justify-content: center;
         max-height: 430px;
         gap: 10px;
+        top: 20px;
     }
 
     .project-vision {
@@ -1364,6 +1434,10 @@ small {
     .project-about div {
         padding: 5px;
         font-size: 16px;
+    }
+
+    .project-tool {
+        min-height: 30px;
     }
 
     /* contact */
@@ -1493,9 +1567,57 @@ small {
     }
 
     /* projects */
+    #dashboard {
+        background: none;
+    }
+
+    #slider-content {
+        position: unset;
+        height: 100%;
+    }
+
+    #projects-slider h3 {
+        font-size: 1.4rem;
+        max-width: unset;
+        height: unset;
+        margin-top: unset;
+    }
+
+    .project-content {
+        top: unset;
+        justify-content: space-around;
+    }
+
+    .project-visual {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-visual img {
+        max-height: 190px;
+    }
+
+    .project-techno {
+        gap: 5px;
+    }
+
     .project-tool {
-        min-height: 30px;
-        min-width: 100px;  
+        min-height: 25px;
+        min-width: 90px;
+        font-size: 12px;
+    }
+
+    .project-about div {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #working-timeline, #working-on {
+        height: unset;
+    }
+
+    .tooltip {
+        margin-bottom: 5px;
     }
 
     /* timeline */
@@ -1519,6 +1641,10 @@ small {
     }
 
     /* footer */
+    #contact-me {
+        min-height: 150dvh;
+    }
+
     #contact {
         width: 95%;
         height: 70%;
